@@ -1,0 +1,40 @@
+.semi-circular-progress-container {
+  position: relative;
+  width: 504px; /* 720px * 0.7 */
+  height: 504px; /* 720px * 0.7 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.threejs-canvas-container {
+  position: absolute; /* Overlay the canvas over the arc */
+  width: 280px;       /* 800px * 0.7 */
+  height: 400px;      /* 400px * 0.7 */
+  z-index: 1;         /* Ensure the model is rendered beneath the arc */
+  margin-top: 150px;
+  padding-left: 0px;
+}
+
+.centered-image {
+  position: absolute;
+  width: 280px; /* 400px * 0.7 */
+  height: 280px; /* 400px * 0.7 */
+  object-fit: contain;
+  z-index: 1;
+}
+
+.progress-circle {
+  position: relative;
+  z-index: 2;
+  transform: rotate(-125deg);
+}
+
+.background-circle {
+  stroke-linecap: round;
+}
+
+.progress-circle circle {
+  transition: stroke-dashoffset 0.35s;
+  stroke-linecap: round; /* Smooth edges for the colored track */
+}
